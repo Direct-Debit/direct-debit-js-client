@@ -3,7 +3,7 @@ const DirectDebitClient = require('../index')
 
 const auth = {
     user: 'TTTT',
-    password: "d4pR4Lah99eA6oq3C0V1KTMV2njSnyDu7okA0RworsFuPP262X456jZt9aR234bb"
+    password: "Paste an API password for TTTT here when you test"
 }
 
 describe('Testing And Monitoring', function() {
