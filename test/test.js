@@ -19,5 +19,6 @@ describe('Testing And Monitoring', function() {
         let client = new DirectDebitClient(false, auth.user, auth.password);
         let response = await client.WhoAmI()
 
+        response.should.have.property('user_code').which.equal("TTTT")
     })
 })
