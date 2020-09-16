@@ -1,7 +1,7 @@
 {
   "name": "direct-sebit",
   "version": "0.0.0",
-  "description": "A JS Client for Direct Debit",
+  "description": "A JS Client for Direct Debit, South Africa's leading debit order collection platform.",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
@@ -10,6 +10,16 @@
     "type": "git",
     "url": "git+https://github.com/Direct-Debit/direct-debit-js-client.git"
   },
+  "keywords": [
+    "payments",
+    "payment system",
+    "debit order system",
+    "debit order collections",
+    "backend",
+    "client",
+    "api",
+    "api client"
+  ],
   "author": "Direct Debit",
   "license": "MIT",
   "bugs": {
