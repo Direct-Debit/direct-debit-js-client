@@ -1,0 +1,26 @@
+{
+  "name": "direct-sebit",
+  "version": "0.0.0",
+  "description": "A JS Client for Direct Debit",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Direct-Debit/direct-debit-js-client.git"
+  },
+  "author": "Direct Debit",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Direct-Debit/direct-debit-js-client/issues"
+  },
+  "homepage": "https://directdebit.co.za",
+  "dependencies": {
+    "axios": "^0.20.0"
+  },
+  "devDependencies": {
+    "mocha": "^8.1.3",
+    "should": "^13.2.3"
+  }
+}
