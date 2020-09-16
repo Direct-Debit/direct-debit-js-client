@@ -1,5 +1,5 @@
 {
-  "name": "direct-sebit",
+  "name": "direct-debit",
   "version": "0.0.0",
   "description": "A JS Client for Direct Debit, South Africa's leading debit order collection platform.",
   "main": "index.js",
