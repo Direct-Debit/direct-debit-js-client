@@ -27,7 +27,8 @@
   },
   "homepage": "https://directdebit.co.za",
   "dependencies": {
-    "axios": "^0.20.0"
+    "axios": "^0.21.1",
+    "form-data": "^4.0.0"
   },
   "devDependencies": {
     "mocha": "^8.1.3",

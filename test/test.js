@@ -7,7 +7,7 @@ const auth = {
 }
 
 describe('Testing And Monitoring', function() {
-    it('Create a client', function() {
+    it('Create a client', function () {
         let client = new DirectDebitClient(false, auth.user, auth.password);
 
         should.exist(client);
@@ -15,10 +15,21 @@ describe('Testing And Monitoring', function() {
         client.baseURL.should.startWith('https://dos-dr')
     })
 
-    it('Know who I am', async function() {
+    it('Know who I am', async function () {
         let client = new DirectDebitClient(false, auth.user, auth.password);
         let response = await client.WhoAmI()
 
         response.should.have.property('user_code').which.equal("TTTT")
+    })
+})
+
+describe('EFT Batches', function() {
+    it("Upload a string as a file", async function() {
+        let client = new DirectDebitClient(false, auth.user, auth.password);
+        let data = "This data should still get a 200 response from the API, but the batch will be in an error state" + (Math.random()).toString()
+
+        let response = await client.UploadEFTFile(data)
+
+        response.should.have.property('id')
     })
 })

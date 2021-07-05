@@ -1,4 +1,5 @@
 const axios = require('axios')
+const FormData = require("form-data")
 
 module.exports = class DirectDebitClient {
     constructor(production, userCode, password) {
@@ -16,6 +17,25 @@ module.exports = class DirectDebitClient {
             let url = this.baseURL + 'whoami'
 
             axios.get(url, {auth: this.auth})
+                .then(r => resolve(r.data))
+                .catch(r => reject(r))
+        });
+    }
+
+    async UploadEFTFile(content, fileName) {
+        fileName || (fileName = "file_data.csv")
+
+        let form = new FormData()
+        form.append("file_data", content, {
+            filename: fileName
+        })
+
+        return new Promise((resolve, reject) => {
+            let conf = {
+                headers: form.getHeaders(),
+                auth: this.auth
+            }
+            axios.post(this.baseURL + "batch/eft/csv", form.getBuffer(), conf)
                 .then(r => resolve(r.data))
                 .catch(r => reject(r))
         });
